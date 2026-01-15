@@ -8,7 +8,8 @@ body:
       value: |
         This template is for **user stories in the product repo**.
         It captures **product intent and outcomes**, not implementation details.
-
+        It does not imply prioritization, scheduling, or implementation commitment.
+        
   - type: textarea
     id: need
     attributes:
@@ -42,17 +43,6 @@ body:
       required: true
 
   - type: textarea
-    id: examples
-    attributes:
-      label: Examples
-      description: >
-        Concrete examples or analogies that help clarify the need or goals.
-      placeholder: |
-        Code examples, existing implementations, or other relevant context.
-    validations:
-      required: false
-
-  - type: textarea
     id: non_goals
     attributes:
       label: Non-Goals / Out of Scope
@@ -66,9 +56,13 @@ body:
     validations:
       required: false
 
-  - type: markdown
+  - type: textarea
+    id: examples
     attributes:
-      value: |
-        ---
-        This story expresses **product intent only**.
-        It does not imply prioritization, scheduling, or implementation commitment.
+      label: Examples
+      description: >
+        Concrete examples or analogies that help clarify the need or goals.
+      placeholder: |
+        Code examples, existing implementations, or other relevant context.
+    validations:
+      required: false
