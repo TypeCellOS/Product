@@ -1,8 +1,8 @@
 name: User Story
 description: Describe a user problem and the intended outcome
-title: "[Story] "
+title: ""
 labels:
-  - user-story
+  - User Story
 body:
   - type: markdown
     attributes:
