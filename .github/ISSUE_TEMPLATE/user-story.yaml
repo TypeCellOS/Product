@@ -18,6 +18,7 @@ body:
         What problem is being solved? What is currently missing, unclear, or difficult?
         Please avoid proposing solutions.
       placeholder: >
+        Example Need:
         People living in a small village without access to a car have very limited
         mobility. Without a reliable way to travel beyond the village, it is difficult
         to access jobs, education, healthcare, or social opportunities outside the
@@ -33,6 +34,7 @@ body:
         What should be possible once this story is addressed?
         Describe outcomes, not features or implementation.
       placeholder: |
+        Example Goals:
         - People without cars can travel beyond the village and explore the outside world
         - Fewer residents need to rely on individual car trips for daily travel
         - Traffic congestion in and around the village is reduced
@@ -43,16 +45,22 @@ body:
   - type: textarea
     id: examples
     attributes:
-      label: Examples / Scope Notes
+      label: Examples
       description: >
-        Concrete examples, expectations, or boundaries.
-        Optional but encouraged.
+        Concrete examples or analogies that help clarify the need or goals.
       placeholder: |
-        Example:
-        - A clearly accessible place where people can start their journey using
-          shared transportation
+        Code examples, existing implementations, or other relevant context.
+    validations:
+      required: false
 
-        Out of scope for the first iteration:
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-Goals / Out of Scope
+      description: >
+        What is explicitly not being addressed as part of this story?
+      placeholder: |
+        Example Non-Goals:
         - Optimizing routes or schedules
         - Ticket pricing or fare systems
         - Long-distance or inter-city transport
