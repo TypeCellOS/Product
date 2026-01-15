@@ -1,99 +1,61 @@
 name: User Story
-description: Describe a user problem or need that may result in product work
+description: Describe a user problem and the intended outcome
 title: "[Story] "
 labels:
   - user-story
-  - needs-triage
 body:
   - type: markdown
     attributes:
       value: |
-        ## User Story
-
-        This template is for **user problems or needs**, not implementation proposals.
-        If you are reporting a bug, documentation issue, or proposing a technical design,
-        please use the appropriate template instead.
+        This template is for **user stories in the product repo**.
+        It captures **product intent and outcomes**, not implementation details.
 
   - type: textarea
-    id: problem
+    id: need
     attributes:
-      label: Problem / Need
+      label: User Need
       description: >
-        What problem is the user experiencing? What is hard, confusing, or impossible today?
-        Describe the problem without proposing a solution.
+        What problem is being solved? What is currently missing, unclear, or difficult?
+        Please avoid proposing solutions.
       placeholder: >
-        Users cannot reliably understand how related records behave when records are deleted,
-        leading to data loss or broken assumptions.
+        People living in a small village without access to a car have very limited
+        mobility. Without a reliable way to travel beyond the village, it is difficult
+        to access jobs, education, healthcare, or social opportunities outside the
+        immediate area.
     validations:
       required: true
 
   - type: textarea
-    id: user
+    id: goals
     attributes:
-      label: Affected Users
+      label: Goal(s)
       description: >
-        Who is experiencing this problem? (personas, roles, usage context)
-      placeholder: >
-        Application developers building on the core database library.
+        What should be possible once this story is addressed?
+        Describe outcomes, not features or implementation.
+      placeholder: |
+        - People without cars can travel beyond the village and explore the outside world
+        - Fewer residents need to rely on individual car trips for daily travel
+        - Traffic congestion in and around the village is reduced
+        - Air quality improves due to lower vehicle emissions
     validations:
       required: true
 
   - type: textarea
-    id: value
+    id: examples
     attributes:
-      label: Why This Matters
+      label: Examples / Scope Notes
       description: >
-        Why is this problem worth solving? What impact does it have on users or the ecosystem?
-      placeholder: >
-        Unclear behavior increases support load and reduces trust in the library for
-        production use.
-    validations:
-      required: true
+        Concrete examples, expectations, or boundaries.
+        Optional but encouraged.
+      placeholder: |
+        Example:
+        - A clearly accessible place where people can start their journey using
+          shared transportation
 
-  - type: textarea
-    id: success
-    attributes:
-      label: Desired Outcome (Success Criteria)
-      description: >
-        What would be true for the user if this problem were addressed?
-        Describe outcomes, not features.
-      placeholder: >
-        Developers can predict and reason about relation behavior without reading source code.
-    validations:
-      required: true
-
-  - type: textarea
-    id: non_goals
-    attributes:
-      label: Out of Scope / Non-Goals
-      description: >
-        What is explicitly not being attempted here? (optional but recommended)
-      placeholder: >
-        This does not attempt to design a UI or change unrelated APIs.
-    validations:
-      required: false
-
-  - type: textarea
-    id: rfc
-    attributes:
-      label: RFC Consideration
-      description: >
-        Does this potentially affect core behavior, public APIs, or long-term direction?
-        If yes, note that an RFC may be required.
-      placeholder: >
-        This likely affects core relation semantics and may require an RFC.
-    validations:
-      required: false
-
-  - type: textarea
-    id: references
-    attributes:
-      label: Related Context / Links
-      description: >
-        Link to related issues, discussions, RFCs, or external references.
-      placeholder: >
-        - #123
-        - rfcs/0123-relations-lifecycle.md
+        Out of scope for the first iteration:
+        - Optimizing routes or schedules
+        - Ticket pricing or fare systems
+        - Long-distance or inter-city transport
     validations:
       required: false
 
@@ -101,7 +63,5 @@ body:
     attributes:
       value: |
         ---
-        **Notes**
-        - This story does not imply prioritization or commitment.
-        - Implementation details belong in linked issues or RFCs.
-        - Product facilitates triage; maintainers advise on technical impact.
+        This story expresses **product intent only**.
+        It does not imply prioritization, scheduling, or implementation commitment.
