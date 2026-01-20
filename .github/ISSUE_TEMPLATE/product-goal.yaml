@@ -1,7 +1,7 @@
 name: Product Goal
 description: Describe a user-centered product outcome for the roadmap
 labels:
-  - "Product Goal"
+  - "product-goal"
 body:
   - type: markdown
     attributes:
