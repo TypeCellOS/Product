@@ -1,0 +1,43 @@
+name: Product Goal
+description: Describe a user-centered product outcome for the roadmap
+labels:
+  - "Product Goal"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for **product goals**.
+        
+        Product goals describe **user-centered outcomes** at the roadmap level.
+        They intentionally avoid features, implementation details, timelines,
+        or delivery commitments.
+
+  - type: textarea
+    id: user_aim
+    attributes:
+      label: What a user wants to achieve
+      description: >
+        Describe the underlying user intent or aspiration this goal serves.
+        Focus on the experience and value for the user, not on solutions or features.
+      placeholder: >
+        Example:
+        To organize information in a structured way inside documents, in a way that
+        feels natural, flexible, and easy to adapt over time.
+    validations:
+      required: true
+
+  - type: textarea
+    id: success
+    attributes:
+      label: What success looks like
+      description: >
+        Describe the observable outcomes that indicate this goal is largely met.
+        Avoid listing features or defining scope in detail.
+      placeholder: |
+        Example:
+        - Users feel confident working with structured information inside documents
+        - Structure can evolve without forcing users to recreate content
+        - The experience feels approachable rather than technical
+        - The capability integrates naturally into existing workflows
+    validations:
+      required: true
