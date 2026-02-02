@@ -1,7 +1,7 @@
 name: User Story
 description: Describe a user problem and the intended outcome
 labels:
-  - "User Story"
+  - "user-story"
 body:
   - type: markdown
     attributes:
